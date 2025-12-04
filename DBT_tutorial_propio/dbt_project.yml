@@ -1,0 +1,26 @@
+name: DBT_tutorial_propio
+version: 1.0.0
+config-version: 2
+profile: DBT_tutorial_propio
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+models:
+  DBT_tutorial_propio:
+  
+    raw:
+      +schema: raw
+      +materialized: view
+
+    marts:
+      +schema: marts
+      +materialized: view
